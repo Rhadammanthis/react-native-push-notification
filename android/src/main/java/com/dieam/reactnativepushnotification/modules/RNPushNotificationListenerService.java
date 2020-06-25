@@ -1,5 +1,6 @@
 package com.dieam.reactnativepushnotification.modules;
 
+import com.facebook.react.ReactApplication;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -8,7 +9,6 @@ import android.os.Looper;
 import android.util.Log;
 
 import com.dieam.reactnativepushnotification.modules.RNReceivedMessageHandler;
-import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
