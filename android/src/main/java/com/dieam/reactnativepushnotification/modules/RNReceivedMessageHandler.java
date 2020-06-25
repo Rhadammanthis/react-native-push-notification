@@ -52,6 +52,11 @@ public class RNReceivedMessageHandler {
 
         Map<String, String> notificationData = message.getData();
 
+        // Copy `mp_message` to `message` to support Mixpanel
+        if (notificationData.containsKey("mp_message")) {
+            bundle.putString("message", notificationData.get("mp_message"));
+        }
+
         // Copy `twi_body` to `message` to support Twilio
         if (notificationData.containsKey("twi_body")) {
             bundle.putString("message", notificationData.get("twi_body"));
